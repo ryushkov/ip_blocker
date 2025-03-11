@@ -29,7 +29,7 @@ def log_message(level, message, ip):
     elif level == "error":
         logger.error(message, extra=extra)
 
-# функция определения прав пользователя от имени которого запущен скрипт
+# функция определения прав пользователя от имени которого запущен скрипт нужны права админа
 def check_root():
     if os.getuid() != 0:
         log_message("error", "Этот скрипт требует прав root. Запустите через sudo.", "N/A")
